@@ -1,12 +1,20 @@
 const blacktheme = "";
 const lighttheme = "";
 const solidtheme = "";
-const body = document.querySelector("body").attributes["data-theme"].value;
+const body = document.querySelector("html").attributes["data-theme"].value;
 
 let theme = [];
 
 function loadtheme() {
-  alert(body);
+  if (body == "black") {
+    alert("black");
+  } else if (body == "light") {
+    alert("light");
+  } else if (body == "solid") {
+    alert("solid");
+  } else {
+    alert("solid");
+  }
 }
 
 function responsivemenu() {
