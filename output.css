@@ -8,27 +8,27 @@ body {
 
 :root {
   --theme-color: #f1f2f3;
-  --text-color: #000000;
+  --theme-background-color: #000000;
 }
 
 html[data-theme=""] {
   --theme-color: black;
-  --text-color: $light-bg-color;
+  --theme-background-color: $light-bg-color;
 }
 
 html[data-theme=solid] {
   --theme-color: white;
-  --text-color: $solid-bg-color;
+  --theme-background-color: $solid-bg-color;
 }
 
 html[data-theme=light] {
   --theme-color: black;
-  --text-color: $light-bg-color;
+  --theme-background-color: $light-bg-color;
 }
 
 html[data-theme=black] {
   --theme-color: white;
-  --text-color: $black-bg-color;
+  --theme-background-color: $black-bg-color;
 }
 
 header {
