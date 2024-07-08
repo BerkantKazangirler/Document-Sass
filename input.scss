@@ -14,24 +14,29 @@ body {
   margin: auto;
 }
 
+:root {
+  --theme-color: #f1f2f3;
+  --text-color: #000000;
+}
+
 html[data-theme=""] {
-  color: #f75f8f;
-  background-color: light;
+  --theme-color: black;
+  --text-color: $light-bg-color;
 }
 
 html[data-theme="solid"] {
-  color: white;
-  background-color: $solid-bg-color;
+  --theme-color: white;
+  --text-color: $solid-bg-color;
 }
 
 html[data-theme="light"] {
-  color: black;
-  background-color: $light-bg-color;
+  --theme-color: black;
+  --text-color: $light-bg-color;
 }
 
 html[data-theme="black"] {
-  color: white;
-  background-color: $black-bg-color;
+  --theme-color: white;
+  --text-color: $black-bg-color;
 }
 
 header {
