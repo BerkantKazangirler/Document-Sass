@@ -4,66 +4,7 @@ const solidtheme = document.getElementById("solidtheme");;
 const body = document.querySelector("html");
 const themebutton = document.getElementById("theme-button");
 const themecontainer = document.getElementById("theme-options");
-const elements = document.querySelectorAll('a#adress-element, a#adress-element span');
 
-const loadtheme = () => {
-  if (body.attributes["data-theme"].value == "black") {
-
-    document.getElementById('header-svg').style.color = "white";
-    document.getElementById('header-svg2').style.color = "white";
-    document.getElementById('theme-button').style.color = "white";
-    document.getElementById('adress-element').style.color = "white";
-    document.getElementById('adress-element').style.color = "white";
-    document.getElementById('baslık').style.color = "white";
-    document.getElementById('abaslık').style.color = "white";
-    document.getElementById('installion').style.color = "white";
-    body.style.color = "white";
-    body.style.backgroundColor = "black";
-    elements.forEach(element => {
-      element.style.color = 'white';
-    });
-  }
-
-  else if (body.attributes["data-theme"].value == "light") {
-    document.getElementById('header-svg').style.color = "black";
-    document.getElementById('header-svg2').style.color = "black";
-    document.getElementById('theme-button').style.color = "black";
-    document.getElementById('baslık').style.color = "black";
-    document.getElementById('abaslık').style.color = "black";
-    document.getElementById('installion').style.color = "black";
-    body.style.color = "black";
-    body.style.backgroundColor = "white";
-    elements.forEach(element => {
-      element.style.color = 'black';
-    });
-  }
-
-  else if (body.attributes["data-theme"].value == "solid") {
-    document.getElementById('header-svg').style.color = "white";
-    document.getElementById('header-svg2').style.color = "white";
-    document.getElementById('theme-button').style.color = "white";
-    document.getElementById('adress-element').style.color = "white";
-    document.getElementById('baslık').style.color = "white";
-    document.getElementById('abaslık').style.color = "white";
-    document.getElementById('installion').style.color = "white";
-    body.style.color = "white";
-    body.style.backgroundColor = "#26334f";
-    elements.forEach(element => {
-      element.style.color = 'white';
-    });
-  }
-
-  else {
-    document.getElementById('header-svg').style.color = "white";
-    document.getElementById('header-svg2').style.color = "white";
-    document.getElementById('adress-element').style.color = "white";
-    document.getElementById('theme-button').style.color = "white";
-    document.getElementById('baslık').style.color = "white";
-    document.getElementById('abaslık').style.color = "white";
-    body.style.color = "white";
-    body.style.backgroundColor = "#26334f";
-  }
-}
 
 function responsivemenu() {
   var hamburger = document.getElementsByClassName('hamburger-lines');
@@ -91,19 +32,7 @@ blacktheme.addEventListener("click", (e) => {
   } else {
     body.attributes["data-theme"].value = "black";
     setStorage();
-    document.getElementById('header-svg').style.color = "white";
-    document.getElementById('header-svg2').style.color = "white";
-    document.getElementById('theme-button').style.color = "white";
-    document.getElementById('adress-element').style.color = "white";
-    document.getElementById('adress-element').style.color = "white";
-    document.getElementById('baslık').style.color = "white";
-    document.getElementById('abaslık').style.color = "white";
-    document.getElementById('installion').style.color = "white";
-    body.style.color = "white";
-    body.style.backgroundColor = "black";
-    elements.forEach(element => {
-      element.style.color = 'white';
-    });
+
   }
 })
 
@@ -114,17 +43,7 @@ lighttheme.addEventListener("click", (e) => {
   else {
     body.attributes["data-theme"].value = "light";
     setStorage();
-    document.getElementById('header-svg').style.color = "black";
-    document.getElementById('header-svg2').style.color = "black";
-    document.getElementById('theme-button').style.color = "black";
-    document.getElementById('baslık').style.color = "black";
-    document.getElementById('abaslık').style.color = "black";
-    document.getElementById('installion').style.color = "black";
-    body.style.color = "black";
-    body.style.backgroundColor = "white";
-    elements.forEach(element => {
-      element.style.color = 'black';
-    });
+
   }
 })
 
@@ -135,18 +54,6 @@ solidtheme.addEventListener("click", (e) => {
   else {
     body.attributes["data-theme"].value = "solid";
     setStorage();
-    document.getElementById('header-svg').style.color = "white";
-    document.getElementById('header-svg2').style.color = "white";
-    document.getElementById('theme-button').style.color = "white";
-    document.getElementById('adress-element').style.color = "white";
-    document.getElementById('baslık').style.color = "white";
-    document.getElementById('abaslık').style.color = "white";
-    document.getElementById('installion').style.color = "white";
-    body.style.color = "white";
-    body.style.backgroundColor = "#26334f";
-    elements.forEach(element => {
-      element.style.color = 'white';
-    });
   }
 })
 
@@ -162,5 +69,4 @@ const getStore = () => {
 
 window.addEventListener('load', () => {
   getStore();
-  loadtheme();
 }, false)

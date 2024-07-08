@@ -8,35 +8,32 @@ $code-pink-color : #f75f8f;
 $code-blue-color: #52a8ff;
 $code-green-color: #62c073;
 
-body {
-  height: 100%;
-  width: 100%;
-  margin: auto;
-}
-
 :root {
   --theme-color: #f1f2f3;
   --theme-background-color: #000000;
 }
 
-html[data-theme=""] {
-  --theme-color: black;
-  --theme-background-color: $light-bg-color;
-}
-
 html[data-theme="solid"] {
   --theme-color: white;
-  --theme-background-color: $solid-bg-color;
+  --theme-background-color: #26334f;
 }
 
 html[data-theme="light"] {
   --theme-color: black;
-  --theme-background-color: $light-bg-color;
+  --theme-background-color: #ffffff;
 }
 
 html[data-theme="black"] {
   --theme-color: white;
-  --theme-background-color: $black-bg-color;
+  --theme-background-color: #0a0a0a;
+}
+
+body {
+  color: var(--theme-color);
+  background-color: var(--theme-background-color);
+  height: 100%;
+  width: 100%;
+  margin: auto;
 }
 
 header {
@@ -139,7 +136,7 @@ header {
         font-size: 12px;
         font-family: 'Poppins', sans-serif;
         text-decoration: none;
-        color: grey;
+        color: var(--theme-color);
         font-weight: 500;
       }
     }
@@ -156,7 +153,7 @@ header {
         background-color: transparent;
         position: relative;
         top: -4px;
-        border: 1px solid rgba(255, 255, 255, 0.215);
+        border: 1px solid --theme-color;
         height: 30px;
         width: 230px;
       }
@@ -165,7 +162,7 @@ header {
         text-decoration: none;
 
         svg {
-          
+          color: var(--theme-color);
           padding: 10px;
           position: relative;
           top: 11px;
@@ -176,7 +173,7 @@ header {
         #theme-button,
         #header-svg2,
         #header-svg {
-          color: white;
+          color: var(--theme-color);
         }
 
         svg:hover {
@@ -306,7 +303,7 @@ header {
         }
 
         li::marker {
-          color: gray;
+          color: var(--theme-color);
         }
       }
 
@@ -398,7 +395,7 @@ header {
         padding-top: 50px;
         border: 0;
         background-color: transparent;
-        color: white;
+        color: var(--theme-color);
         left: 90%;
         position: relative;
         font-family: 'Poppins', sans-serif;
@@ -447,12 +444,13 @@ header {
     height: 600px;
     background-color: transparent;
 
-    a {
-      color: white;
+    #adress-element {
+      color: var(--theme-color);
       padding-right: 50px;
       text-decoration: none;
 
       span {
+        color: var(--theme-color);
         font-size: 13px;
         font-family: 'Poppins', sans-serif;
 
@@ -462,14 +460,14 @@ header {
 
       #baslık {
         font-size: 16px;
-        color: white;
+        color: var(--theme-color);
         opacity: 1;
         font-weight: 600;
       }
 
       #abaslık {
         font-size: 14px;
-        color: white;
+        color: var(--theme-color);
         font-weight: 500;
         opacity: 0.9;
       }

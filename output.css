@@ -1,34 +1,31 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-body {
-  height: 100%;
-  width: 100%;
-  margin: auto;
-}
-
 :root {
   --theme-color: #f1f2f3;
   --theme-background-color: #000000;
 }
 
-html[data-theme=""] {
-  --theme-color: black;
-  --theme-background-color: $light-bg-color;
-}
-
 html[data-theme=solid] {
   --theme-color: white;
-  --theme-background-color: $solid-bg-color;
+  --theme-background-color: #26334f;
 }
 
 html[data-theme=light] {
   --theme-color: black;
-  --theme-background-color: $light-bg-color;
+  --theme-background-color: #ffffff;
 }
 
 html[data-theme=black] {
   --theme-color: white;
-  --theme-background-color: $black-bg-color;
+  --theme-background-color: #0a0a0a;
+}
+
+body {
+  color: var(--theme-color);
+  background-color: var(--theme-background-color);
+  height: 100%;
+  width: 100%;
+  margin: auto;
 }
 
 header {
@@ -117,7 +114,7 @@ header {
   font-size: 12px;
   font-family: "Poppins", sans-serif;
   text-decoration: none;
-  color: grey;
+  color: var(--theme-color);
   font-weight: 500;
 }
 .header-container .header-container-elements .header-int {
@@ -131,7 +128,7 @@ header {
   background-color: transparent;
   position: relative;
   top: -4px;
-  border: 1px solid rgba(255, 255, 255, 0.215);
+  border: 1px solid --theme-color;
   height: 30px;
   width: 230px;
 }
@@ -139,6 +136,7 @@ header {
   text-decoration: none;
 }
 .header-container .header-container-elements .header-int a svg {
+  color: var(--theme-color);
   padding: 10px;
   position: relative;
   top: 11px;
@@ -149,7 +147,7 @@ header {
 .header-container .header-container-elements .header-int a #theme-button,
 .header-container .header-container-elements .header-int a #header-svg2,
 .header-container .header-container-elements .header-int a #header-svg {
-  color: white;
+  color: var(--theme-color);
 }
 .header-container .header-container-elements .header-int a svg:hover {
   border-radius: 4px;
@@ -258,7 +256,7 @@ header {
 }
 .main-container .center-container .desc ol li::marker,
 .main-container .center-container .desc ul li::marker {
-  color: gray;
+  color: var(--theme-color);
 }
 .main-container .center-container .desc #söz {
   font-weight: 600;
@@ -335,7 +333,7 @@ header {
   padding-top: 50px;
   border: 0;
   background-color: transparent;
-  color: white;
+  color: var(--theme-color);
   left: 90%;
   position: relative;
   font-family: "Poppins", sans-serif;
@@ -374,25 +372,26 @@ header {
   height: 600px;
   background-color: transparent;
 }
-.main-container .adress-container a {
-  color: white;
+.main-container .adress-container #adress-element {
+  color: var(--theme-color);
   padding-right: 50px;
   text-decoration: none;
 }
-.main-container .adress-container a span {
+.main-container .adress-container #adress-element span {
+  color: var(--theme-color);
   font-size: 13px;
   font-family: "Poppins", sans-serif;
   opacity: 0.8;
 }
-.main-container .adress-container a #baslık {
+.main-container .adress-container #adress-element #baslık {
   font-size: 16px;
-  color: white;
+  color: var(--theme-color);
   opacity: 1;
   font-weight: 600;
 }
-.main-container .adress-container a #abaslık {
+.main-container .adress-container #adress-element #abaslık {
   font-size: 14px;
-  color: white;
+  color: var(--theme-color);
   font-weight: 500;
   opacity: 0.9;
 }
